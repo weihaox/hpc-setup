@@ -110,23 +110,23 @@ scancel     -> delete a job
 mybalance   -> show current balance of core hour credits
 ```
 
-## 5. a simple example: submit `cifar10_tutorial` to wilkes2 (pascal) or wilkes3 (ampere)
+## 5. a simple example: 
 
-Prerequisite: follow the same step of [Setup PyTorch on CSD3](https://docs.hpc.cam.ac.uk/hpc/software-packages/pytorch.html).
+Here is a simple example of submitting `cifar10_tutorial.py` to wilkes2 (pascal) or wilkes3 (ampere). Please first follow steps of [Setup PyTorch on CSD3](https://docs.hpc.cam.ac.uk/hpc/software-packages/pytorch.html) to download scripts and datasets.
 
 - terminal:
-(1). modify sbatch directives and environment in `my_slurm_submit.wilkes2` or `my_slurm_submit.wilkes3` 
-(2). execute `sbatch my_slurm_submit.wilkes2` or `sbatch my_slurm_submit.wilkes3`
-(3). check results (as per your configuration, you will be notified via email when the execution commences, concludes, or encounters an error). The logs will be in the work directory and names as slurm-16363149 ($JOBID$).out.
+    1. modify sbatch directives and environment in `my_slurm_submit.wilkes2` or `my_slurm_submit.wilkes3` 
+    2. execute `sbatch my_slurm_submit.wilkes2` or `sbatch my_slurm_submit.wilkes3`
+    3. check results (as per your configuration, you will be notified via email when the execution commences, concludes, or encounters an error). 
 
 - login-web.hpc.cam.ac.uk
-(1) select Job -> Job Composer; 
-(2) click `New Job` -> From Templates; select "Simple GPU Job"; change the Job Name;
-(3) modify the Submit Script (slurm_submit.wilkes2); you can open the directory in the file editor (click Open Editor at the right bottom)
-(4) click `submit` and the results will be presented on the right section.
+    1. select Job -> Job Composer; 
+    2. click `New Job` -> From Templates; select "Simple GPU Job"; change the Job Name;
+    3. modify the Submit Script (slurm_submit.wilkes2); you can open the directory in the file editor (click Open Editor at the right bottom)
+    4. click `submit` and the results will be presented on the right section.
 
-You can use the [dashboard](https://login-web.hpc.cam.ac.uk/pun/sys/dashboard/activejobs) to monitor you submitted job.
-
+The logs will be in the work directory and names as slurm-<JOBID>.out. You can use the [dashboard](https://login-web.hpc.cam.ac.uk/pun/sys/dashboard/activejobs) to monitor you submitted job.
+    
 
 useful docs (official instructions):
 - Research Computing Services HPC Documentation: [link](https://docs.hpc.cam.ac.uk).
